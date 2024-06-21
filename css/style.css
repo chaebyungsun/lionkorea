@@ -1,0 +1,147 @@
+video {
+  width: 100%;
+}
+.section {
+  overflow: hidden;
+}
+.slide {
+  width: 100%;
+  position: relative;
+}
+.slide ul {
+  width: 400%;
+  position: relative;
+  left: 0;
+  overflow: hidden;
+  /*높이 자동 계산*/
+}
+.slide li {
+  width: 25%;
+  float: left;
+}
+.slide img {
+  width: 100%;
+}
+.prev,
+.next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  top: 40%;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+.prev span,
+.next span {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-top: 2px solid #fff;
+  border-right: 2px solid #fff;
+  box-sizing: border-box;
+  top: 10px;
+  left: 10px;
+}
+
+.prev span {
+  transform: rotate(-135deg);
+}
+
+.next span {
+  transform: rotate(45deg);
+}
+
+.contents {
+}
+.pickup {
+  margin: 0 auto;
+}
+.pickup ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pickup ul li {
+  width: calc(100% / 2);
+  overflow: hidden;
+}
+.pickup li img {
+  position: relative;
+  transition: 0.3s;
+  width: 100%;
+  z-index: 1;
+}
+.pickup li:hover img {
+  transform: scale(1.1);
+}
+.pickup li:last-child img {
+  display: none;
+}
+.mall {
+  position: relative;
+}
+.mall h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30%;
+}
+.mall h2 a {
+  display: inline-block;
+  vertical-align: middle;
+  border: 3px solid #0c090a;
+  padding: 10px;
+  color: #0c090a;
+  transition-duration: 0.3s;
+}
+.mall h2 a:hover {
+  background-color: #0c090a;
+  color: #fff;
+}
+.mall img {
+  width: 100%;
+}
+.mall .pc {
+  display: none;
+}
+/***** 태블릿 추가 설정 *****/
+/***** min width 768px 이상 *****/
+@media all and (min-width: 768px) {
+  .prev,
+  .next {
+    top: 45%;
+  }
+  .mall h2 {
+    top: 35%;
+  }
+}
+/***** pc웹 추가 설정 *****/
+/***** min width 1024px 이상 *****/
+@media all and (min-width: 1024px) {
+  .prev,
+  .next {
+    top: 45%;
+  }
+  .pickup ul li {
+    width: calc(100% / 3);
+  }
+  .pickup li:last-child img {
+    display: block;
+  }
+  .mall h2 {
+    top: 40%;
+  }
+  .mall .mt {
+    display: none;
+  }
+  .mall .pc {
+    display: block;
+  }
+}

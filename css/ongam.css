@@ -1,0 +1,253 @@
+@charset "utf-8";
+
+/********** 모바일 **********/
+
+video {
+    width: 100%;
+}
+
+#main_banner {
+    background-image: url(../img/ongammain.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+}
+
+.m1 {
+    font-size: 1.2em;
+    color: #ec662d;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.m2, 
+.m2 strong {
+    font-size: 1.5em;
+    color: #ec662d;
+}
+
+.m2 {
+    margin-bottom: 25px;
+    color: #000;
+}
+
+article strong {
+    color: #ec662d;
+    font-weight: bold;
+}
+
+.img {
+    margin: 50px auto;
+}
+
+.img ul {
+    padding: 20px;
+}
+
+.img li {
+    margin-bottom: 20px;
+    position: relative;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+.img li img {
+    width: 100%;
+}
+
+
+.text {
+    position: absolute;
+    z-index: 1;
+    width: 95%;
+    height: 70%;
+    top: 3%;
+    left: 20px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #9d9999;
+    text-align: left;
+}
+
+.text h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.img > ul > li > .text > h3 {
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+.img .text p {
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+/*** product ***/
+
+.pro {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.pro img {
+    width: 100%;
+}
+
+.pro h3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pro a {
+    float: right;
+    font-weight: bold;
+    color: #000;
+}
+
+.pro ul {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+}
+
+.pro li {
+    margin-top: 10px;
+}
+
+.pro .pn {
+    display: none;
+}
+
+/*************** 태블릿 추가 설정 ***************/
+/*************** min width 768px 이상 ***************/
+@media all and (min-width: 768px) {
+
+    .img .text p {
+        text-align: left;
+    }
+
+    .img li.text h4 {
+        margin-top: 30px;
+    }
+
+    .pro img {
+        width: 100%;
+    }
+
+    .pro ul {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .pro li {
+        float: left;
+    }
+
+
+    .pro li:last-child {
+        margin-right: 0;
+    }
+}
+
+/*************** pc웹 추가 설정 ***************/
+/*************** min width 1024px 이상 ***************/
+
+@media all and (min-width: 1024px) {
+
+    #main_banner {
+        height: 100vh;
+    }
+    /*** .img ***/
+
+    .img li {
+        grid-template-columns: auto auto;
+        margin: 0 auto;
+/*        width: 100%;    */
+/*        background-color: pink;*/
+/*        border: 4px solid red;*/
+        box-sizing: border-box;
+    }
+
+    .img li img {
+        display: block;
+        width: 100%;
+    }
+
+    .img .text {
+        width: 384px;
+        position: static;
+        float: left;
+        margin: 40% auto;
+        transition: all 0.5s;
+        text-shadow: none;
+    }
+
+    .img li:nth-child(odd) img {
+        grid-column: 2;
+    }
+    
+    .img li:nth-child(odd) .text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+
+    .text h3 {
+        font-size: 1.5em;
+        line-height: 3;
+        margin-top: 30px;
+        color: #000;
+    }
+
+    .img .text p {
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 1.5;
+        color: #000;
+        border-top: 2px solid #6c6c6c;
+        margin-top: 15px;
+    }
+
+    /**1번째**/
+    
+    .pro ul {
+        max-width: 1024px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .pro li {
+        float: left;
+    }
+
+    .pro h3 {
+        font-size: 1.5em;
+        margin-top: 50px;
+    }
+
+    .pro a {
+        font-size: 1.2em;
+        margin-right: 30%;
+    }
+
+    .pro .pn {
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding-top: 20px;
+    }
+}

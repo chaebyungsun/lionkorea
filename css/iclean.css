@@ -1,0 +1,165 @@
+video {
+  width: 100%;
+}
+.m1 {
+  font-size: 1.5em;
+  color: #3b72b8;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+.m2 {
+  font-size: 1.2em;
+  color: #006837;
+  margin-bottom: 5px;
+}
+.m3 {
+  font-size: 0.8em;
+  color: #2c2c2c;
+}
+.img {
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.img li {
+  position: relative;
+}
+.img li img {
+  width: 100%;
+}
+
+.img .text {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  top: 35%;
+  left: -10px;
+  color: #fff;
+  line-height: 30px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #000;
+  text-align: center;
+}
+.img h4 {
+  margin-bottom: 20px;
+  font-size: 1.2em;
+}
+.img p {
+  font-size: 0.9em;
+}
+.pd {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+.pd img {
+  width: 100%;
+}
+.pd h3 {
+  text-align: center;
+  margin-top: 50px;
+}
+.pd a {
+  float: right;
+  font-weight: bold;
+  color: #000;
+}
+.pd ul {
+  margin-top: 60px;
+}
+.pd li {
+  margin-top: 10px;
+}
+.pd .pn {
+  display: none;
+}
+/***** 태블릿 추가 설정 *****/
+/***** min width 768px 이상 *****/
+@media all and (min-width: 768px) {
+  .pd img {
+    width: 100%;
+  }
+  .pd ul {
+    overflow: hidden;
+  }
+  .pd li {
+    width: calc((100% - 10px * 2) / 3);
+    float: left;
+  }
+  .pd li:nth-child(n) {
+    margin-right: 10px;
+  }
+  .pd li:last-child {
+    margin-right: 0;
+  }
+}
+/***** pc웹 추가 설정 *****/
+/***** min width 1024px 이상 *****/
+@media all and (min-width: 1024px) {
+  .img li img {
+    width: 50%;
+    float: left;
+    height: 770px;
+  }
+  .img li {
+    overflow: hidden;
+    position: relative;
+  }
+  .img .text {
+    width: 50%;
+    position: static;
+    float: left;
+    background-color: #f2f2f2;
+    transition: all 0.5s;
+    height: 770px;
+  }
+  .img .text h4 {
+    padding-top: 35%;
+    margin-bottom: 50px;
+  }
+  .img .text p {
+    font-size: 18px;
+  }
+  .m1 {
+    font-size: 26px;
+  }
+  .m2 {
+    font-size: 20px;
+  }
+  .m3 {
+    font-size: 18px;
+  }
+
+  .img h4 {
+    font-size: 18px;
+  }
+  .img p {
+    font-size: 14px;
+  }
+  .pd {
+  }
+  .pd ul {
+    max-width: 1366px;
+    margin: 50px auto;
+  }
+  .pd li {
+    width: calc((100% - 10px * 2) / 3);
+    float: left;
+  }
+  .pd h3 {
+    font-size: 24px;
+    margin-top: 50px;
+  }
+  .pd a {
+    font-size: 18px;
+  }
+  .pdBox {
+    max-width: 1366px;
+    margin: 0 auto;
+  }
+  .pd .pn {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+    padding-top: 20px;
+  }
+}

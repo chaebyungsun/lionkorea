@@ -1,0 +1,523 @@
+@charset "utf-8";
+
+/********** 모바일 **********/
+
+video {
+    width: 100%;
+}
+
+#main_banner {
+    text-align: center;
+    background-image: url(../img/alab_banner.jpg);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    color: #fff;
+}
+
+#main_banner {
+    font-size: 1.5em;
+    text-align: left;
+}
+
+#main_banner p {
+    float: left;
+    font-size: 1.2em;
+}
+
+.p1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(30%, 50%);
+}
+
+.p2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(10%, 80%);
+}
+
+.p3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(20%, -50%);
+    font-size: 1.4em;
+}
+
+.m1 {
+    font-size: 1.2em;
+    color: #ec662d;
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-weight: bold;
+}
+
+.m2,
+.m2 strong {
+    font-size: 1.5em;
+    color: #ec662d;
+}
+
+.m2 {
+    margin-bottom: 25px;
+    color: #000;
+}
+
+article strong {
+    color: #ec662d;
+    font-weight: bold;
+}
+
+/*** article ***/
+
+.mainsec {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 20px 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.img-list {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    max-width: 767px;
+}
+
+.img-list li:nth-of-type(1) {
+    animation-name: fadeInUp;
+    animation-fill-mode: both;
+    animation-delay: 0.1s;
+    animation-duration: 1s;
+}
+
+.img-list li {
+    width: 100%;
+    padding: 20px 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 2s ease-out;
+}
+
+.img-list li.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img-list li a {
+    display: block;
+    width: 100%;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+}
+
+.img-list li .bgi {
+    padding-top: 55%;
+    border-radius: 30px 30px 0 0;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+
+.img-list .list01 .bgi {
+    background-image: url(../img/anti.jpg);
+    padding-top: 55%;
+    border-radius: 30px 30px 0 0;
+}
+
+.img-list .list02 .bgi {
+    background-image: url(../img/plus.jpg);
+    padding-top: 60%;
+    border-radius: 30px 30px 0 0;
+}
+
+.img-list .list03 .bgi {
+    background-image: url(../img/a_lab.jpg);
+    padding-top: 55%;
+    border-radius: 30px 30px 0 0;
+}
+
+.img-list li .text-wrap {
+    padding: 15px;
+    /*    height: auto;*/
+    background-color: #fff;
+    position: relative;
+    border-radius: 0 0 30px 30px;
+    text-align: left;
+    color: #000;
+    border-left: 2px solid #ddd9;
+    border-right: 2px solid #ddd9;
+    border-bottom: 2px solid #ddd9;
+}
+
+.img-list li span {
+    display: block;
+}
+
+.img-list li .text-wrap p {
+    text-align: left;
+    padding: 5px 0;
+}
+
+.img {
+    margin: 50px auto;
+}
+
+.img ul {
+    padding: 20px;
+}
+
+.img li {
+    margin-bottom: 20px;
+    position: relative;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+
+.img li img {
+    width: 100%;
+}
+
+
+.text {
+    position: absolute;
+    z-index: 1;
+    width: 95%;
+    height: 70%;
+    top: 3%;
+    left: 20px;
+    color: #fff;
+    line-height: 30px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #9d9999;
+    text-align: left;
+}
+
+.text h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.img > ul > li > .text > h3 {
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+.img .text p {
+    text-align: left;
+    font-size: 0.8em;
+    line-height: 1.5;
+}
+
+/*** product ***/
+
+.pro {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.pro img {
+    width: 100%;
+}
+
+.pro h3 {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.pro a {
+    float: right;
+    font-weight: bold;
+    color: #000;
+}
+
+.pro ul {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 10px;
+}
+
+.pro ul li {
+    margin-top: 10px;
+}
+
+.pro .pn {
+    display: none;
+}
+
+/*************** 태블릿 추가 설정 ***************/
+/*************** min width 768px 이상 ***************/
+@media all and (min-width: 768px) {
+    #main_banner p {
+        float: left;
+        font-size: 1.5em;
+    }
+
+    .ban {
+        margin: 50px 0;
+    }
+
+
+    .img-list {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+        /*        background-color: #aaa;*/
+        max-width: 1024px;
+        position: relative;
+        transform: translateX(-20px);
+    }
+
+    .img-list li {
+        padding: 0 15px;
+    }
+
+    .img-list li .text-wrap {
+        padding: 15px;
+    }
+
+    .img-list .list01 .bgi {
+        padding-top: 70%;
+    }
+
+    .img-list .list01 .text-wrap {
+        padding: 15px;
+    }
+
+    .img-list .list02 .bgi {
+        padding-top: 68%;
+    }
+
+    .img-list .list02 .text-wrap {
+        padding: 15px;
+    }
+
+    .img-list .list03 .bgi {
+        padding-top: 63%;
+    }
+
+    .img-list .list03 .text-wrap {
+        padding: 15px;
+    }
+
+    .img .text p {
+        text-align: left;
+    }
+
+    .img li.text h4 {
+        margin-top: 30px;
+    }
+
+    .pro img {
+        width: 100%;
+    }
+
+    .pro ul {
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .pro li {
+        float: left;
+    }
+
+
+    .pro li:last-child {
+        margin-right: 0;
+    }
+
+    .pro li img {
+        transition: 0.3s;
+    }
+
+    .pro li:hover img {
+        transform: scale(0.9);
+    }
+}
+
+/*************** pc웹 추가 설정 ***************/
+/*************** min width 1024px 이상 ***************/
+
+@media all and (min-width: 1024px) {
+
+    #main_banner {
+        height: 100vh;
+    }
+
+    #main_banner p {
+        float: left;
+        font-size: 2.5em;
+    }
+
+    .p1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(80%, 100%);
+    }
+
+    .p2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(30%, 100%);
+    }
+
+    .p3 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transform: translate(45%, -90%);
+    }
+
+    .ban {
+        margin: 50px 0;
+    }
+
+    .img-list {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 30px;
+    }
+
+    .img-list li {
+        padding: 0 30px;
+    }
+
+    .img-list li .text-wrap {
+        padding: 15px;
+    }
+
+    .img-list .list01 .bgi {
+        padding-top: 70%;
+    }
+
+    .img-list .list01 .text-wrap {
+        padding: 15px 15px 45px;
+    }
+
+    .img-list .list02 .bgi {
+        padding-top: 68%;
+    }
+
+    .img-list .list02 .text-wrap {
+        padding: 15px 15px 45px;
+    }
+
+    .img-list .list03 .bgi {
+        padding-top: 64%;
+    }
+
+    .img-list .list03 .text-wrap {
+        padding: 15px 15px 20px;
+    }
+
+    /*** .img ***/
+
+    .img li {
+        grid-template-columns: auto auto;
+        margin: 0 auto;
+        /*        width: 100%;    */
+        /*        background-color: pink;*/
+        /*        border: 4px solid red;*/
+        box-sizing: border-box;
+    }
+
+    .img li img {
+        display: block;
+        width: 100%;
+    }
+
+    .img .text {
+        width: 384px;
+        position: static;
+        float: left;
+        margin: 40% auto;
+        /*        transition: all 0.5s;*/
+        text-shadow: none;
+    }
+
+    .img li:nth-child(odd) img {
+        grid-column: 2;
+    }
+
+    .img li:nth-child(odd) .text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .text h2 {
+        font-weight: bold;
+        line-height: 1.1;
+        color: #000;
+    }
+
+    .text h3 {
+        line-height: 3;
+        margin-top: 30px;
+        color: #000;
+    }
+
+    .img .text p {
+        text-align: left;
+        font-size: 0.8em;
+        line-height: 1.5;
+        color: #000;
+        border-top: 2px solid #6c6c6c;
+        margin-top: 15px;
+    }
+
+    /**1번째**/
+
+    .pro ul {
+        max-width: 1024px;
+        margin: 50px auto;
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    .pro li {
+        float: left;
+    }
+    
+    .pro li img {
+        transition: 0.3s;
+    }
+
+    .pro li:hover img {
+        transform: scale(0.9);
+    }
+
+    .pro h3 {
+        font-size: 1.5em;
+        margin-top: 50px;
+    }
+
+    .pro a {
+        font-size: 1.2em;
+        margin-right: 30%;
+    }
+
+    .pro .pn {
+        display: block;
+        font-weight: bold;
+        font-size: 1.2em;
+        padding-top: 20px;
+    }
+}
